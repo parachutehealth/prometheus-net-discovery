@@ -30,12 +30,14 @@ type ExporterConfig []struct {
 	path     string
 }
 
-const ExporterExporterPort = "9999"
+const ExporterExporterPort = "9100"
+const ExporterExporterPath = "http://%s/metrics"
 
 var exporterConfig = ExporterConfig{
 	{ // special exporter_exporter we scan this first to know if we can skip the other ports.
 		port:     ExporterExporterPort,
 		filename: "",
+		path:     ExporterExporterPath,
 	},
 	/*
 		disabled those since we only use exporter_exporter on 9999 for now.
