@@ -1,4 +1,4 @@
-module github.com/fortnoxab/prometheus-net-discovery
+module github.com/parachutehealth/prometheus-net-discovery
 
 go 1.15
 
